@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="account_fiscal_position_form_view_inherited" model="ir.ui.view">
+            <field name="name">account.fiscal.position.form.view.inherited</field>
+            <field name="model">account.fiscal.position</field>
+            <field name="inherit_id" ref="account.view_account_position_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='account_mapping']" position="after">
+                    <page string='Bank Payment' name='bank_payment'>
+                        <group>
+                            <group>
+                                <field name='bank_trans_type' />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

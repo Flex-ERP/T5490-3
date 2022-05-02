@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_bank_payment_form" model="ir.ui.view">
+            <field name="name">bank.payment.form</field>
+            <field name="model">bank.payment</field>
+            <field name="arch" type="xml">
+                <form string="Bank Payment">
+                    <group>
+                        <div>
+                            Download file prepared for bank import
+                        </div>
+                    </group>
+                    <footer>
+                        <button string="Download" class="btn btn-primary" type="object" name="action_download_bank_payment" />
+                        <button string="Close" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

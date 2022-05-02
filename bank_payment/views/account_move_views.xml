@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="account_move_tree_view_inherited" model="ir.ui.view">
+            <field name="name">account.move.tree.view.inherited</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="action_bank_payment" type="object" string="Bank Payment"
+                        invisible="context.get('default_move_type') not in ('in_invoice', 'in_refund')" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
